@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.arhariss.application.controllers.LoginController">
+   <children>
+      <Pane focusTraversable="true" layoutX="300.0" prefHeight="500.0" prefWidth="607.0" style="-fx-background-color: white;">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="207.0" layoutY="157.0" prefHeight="38.0" prefWidth="195.0" text="Login" textFill="#f97b5d">
+               <font>
+                  <Font name="Open Sans Semibold" size="25.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="loginIcon" fitHeight="132.0" fitWidth="132.0" layoutX="238.0" layoutY="15.0">
+               <image>
+                  <Image url="@../../../../../../../../AppData/Local/Temp/icons8_male_user_208px.png" />
+               </image>
+            </ImageView>
+            <JFXTextField fx:id="username" focusColor="#f97b5d" layoutX="163.0" layoutY="212.0" prefHeight="49.0" prefWidth="281.0" promptText="Username" unFocusColor="#c2c2c2ba" />
+            <JFXPasswordField fx:id="password" focusColor="#287ae6" layoutX="163.0" layoutY="292.0" prefHeight="49.0" prefWidth="281.0" promptText="Password" unFocusColor="#c2c2c2" />
+            <Hyperlink layoutX="239.0" layoutY="428.0" onAction="#show" styleClass="link" text="Forget your password ?" />
+            <ImageView fx:id="usernameIcon" fitHeight="38.0" fitWidth="38.0" layoutX="122.0" layoutY="230.0" onMouseClicked="#selectUsername" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../../AppData/Local/Temp/icons8_male_user_512px.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="passwordIcon" fitHeight="38.0" fitWidth="38.0" layoutX="121.0" layoutY="305.0" onMouseClicked="#showPassword" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../../AppData/Local/Temp/icons8_eye_480px.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <JFXButton layoutX="182.0" layoutY="382.0" onAction="#signIn" prefHeight="36.0" prefWidth="88.0" style="-fx-background-color: #287AE6;" styleClass="jfxButton" text="Sign In" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton layoutX="338.0" layoutY="382.0" onAction="#reset" prefHeight="36.0" prefWidth="88.0" style="-fx-background-color: #287AE6;" styleClass="jfxButton" text="Reset" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXTextField fx:id="passwordText" focusColor="#287ae6" layoutX="164.0" layoutY="292.0" prefHeight="49.0" prefWidth="281.0" unFocusColor="#c2c2c2" visible="false" />
+         </children>
+      </Pane>
+      <Pane prefHeight="500.0" prefWidth="300.0" style="-fx-background-color: #F97B5D;">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-1.0" layoutY="54.0" prefHeight="36.0" prefWidth="300.0" text="Car Rental App" textFill="WHITE">
+               <font>
+                  <Font name="Open Sans Semibold" size="25.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="appIcon" fitHeight="187.0" fitWidth="343.0" layoutX="57.0" layoutY="143.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/images/app_logo_lg.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-1.0" layoutY="479.0" prefHeight="13.0" prefWidth="300.0" text="copyrights © 2020" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
